@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="login1.css">
+
+</head>
+
+<body style="background-color: aqua;">
+  <form action="/insertProject" method="post">
+    {%csrf_token%}
+    <section class="vh-100 gradient-custom">
+        <div class="container py-5 h-100">
+          <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+              <div class="card bg-dark text-white" style="border-radius: 1rem;">
+                <div class="card-body p-5 text-center">
+      
+                  <div class="mb-md-5 mt-md-4 pb-5">
+      
+                    <h2 class="fw-bold mb-2 text-uppercase mb-5">Invest</h2>
+                    <div class="form-outline form-white mb-4">
+                        <input type="text"    name='t1' placeholder="Enter Amount" class="form-control form-control-lg" />
+                    </div>
+      
+                    <div class="form-outline form-white mb-4 ">
+                      <div class="row form-group">
+                        <label for="date" class="col-sm-4 col-form-label">Date</label>
+                        <div class="col-sm-7">
+                            <div class="input-group date" id="datepicker">
+                                <input type="text" name="t2" class="form-control">
+                                <span class="input-group-append">
+                                    <span class="input-group-text bg-white d-block">
+                                        <i class="fa fa-calendar col-sm-2"></i>
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                                                
+                    
+                    <div class="form-outline form-white mb-4 mt-3">
+                      <input type="text"    name='t1' placeholder="Mode of transfer" class="form-control form-control-lg" />
+                    </div>
+      
+      
+                    <button class="btn btn-outline-light btn-lg px-5 mt-3" type="submit">Invest</button>
+      
+    
+                  </div>      
+       
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+    </form>
+    <script type="text/javascript">
+      $(function() {
+          $('#datepicker').datepicker({ dateFormat: 'yyyy-mm-dd' });
+      });
+  </script>
+
+  </body>
+</html>
